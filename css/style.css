@@ -7,14 +7,17 @@ Light: #d7d8d9
 Medium: #7a8691
 Dark: #323238
 Darkest: #222226
-
 */
-
 
 /* NAV
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#nav {
-    transition: max-height ease 0.2s;
+.list-wrap {
+    height: 6rem;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
 }
 
 #nav li {
@@ -30,51 +33,55 @@ Darkest: #222226
     display: none;
 }
 
+#mobile-logo {
+    max-width: 5.5rem;
+    position: absolute;
+    top: 0;
+    z-index: 111;
+    left: calc(50% - 2.75rem);
+    background-color: #fff;
+    padding-top: 0.25rem;
+}
+
 #logo img {
     max-width: 6rem;
 }
 
-.list-wrap {
-    display: none;
-    max-height: 0px;
-    transition: max-height 0.15s ease-out;
-    -webkit-transition: max-height .5s ease;
-    -webkit-transition-delay: .4s;
-}
-
-#mobile-logo {
-    max-width: 6rem;
-    display: block;
-    margin: 0 auto;
-    padding-top: 0.5rem;
-}
-
-.menu-header {
-    display: block;
-    float: right;
+.hamburger {
+    position: fixed;
+    z-index: 100;
+    top: 1rem;
+    right: 1rem;
+    border: none;
     font-size: 2.5rem;
-    padding: 2rem;
-    top: 0;
-    position: absolute;
-}
-
-.checkbox1:checked ~ .list-wrap {
-    display: block;
-    max-height: 500px;
-    transition: max-height 0.25s ease-in;
-}
-
-.checkbox1 {
-    opacity: 0;
-    top: -20px;
-    position: absolute;
-}
+    background: white;
+    cursor: pointer;
+  }
+  
+  .closeIcon {
+    display: none;
+  }
+  
+  .menu {
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    z-index: 99;
+    background: #fff;
+    color: #323238;
+    list-style: none;
+    padding-top: 6.5rem;
+    
+  }
+  
+  .showMenu {
+    transform: translateY(0);
+  }
 
 /* HERO
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 #hero {
-    padding: 2rem 10rem 13rem 10rem;
+    padding: 2rem 0rem 13rem 0rem;
     background-image: url(../images/hero.png);
     background-size:fill;
     background-repeat: no-repeat;
@@ -85,6 +92,7 @@ Darkest: #222226
 
 #hero .button {
     background-color: #fff;
+    color: #323238;
 }
 
 #hero-text h4 {
@@ -173,19 +181,34 @@ Darkest: #222226
     font-size: 1.2rem;
 }
 
+/* ------------- MISC */
+
+.portfolio-item {
+    display: block;
+}
+
+#tos ul li {
+    list-style: circle;
+}
+
+#socials {
+    font-size: 5rem;
+}
+
+#socials i {
+    padding: 1rem;
+}
 
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/*
-Note: The best way to structure the use of media queries is to create the queries
-near the relevant code. For example, if you wanted to change the styles for buttons
-on small devices, paste the mobile query code up in the buttons section and style it
-there.
-*/
 
 /* Larger than mobile (default point when grid becomes active) */
 @media (min-width: 600px) {
+    .list-wrap {
+        height: 8rem;
+    }
+
     .menu-header {
         cursor: pointer;
         display: none;
@@ -193,6 +216,7 @@ there.
 
     #nav ul {
         align-items: center;
+        transform: translateY(0);
     }
     
     .list-wrap {
@@ -210,8 +234,33 @@ there.
     }
 
     #mobile-logo {
-        max-width: 6rem;
         display: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
+      
+    .closeIcon {
+        display: none;
+    }
+    
+    .menu {
+    transform: translateY(100%);
+    transition: transform 0.2s;
+    z-index: 99;
+    background: #fff;
+    color: #323238;
+    list-style: none;
+    padding: 0rem;        
+    }
+
+    #hero {
+        padding: 2rem 10rem 13rem 10rem;
+    }
+
+    #tos ul li {
+        margin-left: 1.5rem;
     }
 }
 
