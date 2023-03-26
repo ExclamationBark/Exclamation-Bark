@@ -1,0 +1,232 @@
+/* COLORS:
+BLUE:
+Main: 57d7fa
+Darker Main: #2fc5ee
+GREY:
+Light: #d7d8d9
+Medium: #7a8691
+Dark: #323238
+Darkest: #222226
+
+*/
+
+
+/* NAV
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#nav {
+    transition: max-height ease 0.2s;
+}
+
+#nav li {
+    align-items: center;
+    justify-content: center;
+}
+
+#nav li #logo {
+    display: block;
+}
+
+#logo {
+    display: none;
+}
+
+#logo img {
+    max-width: 6rem;
+}
+
+.list-wrap {
+    display: none;
+    max-height: 0px;
+    transition: max-height 0.15s ease-out;
+    -webkit-transition: max-height .5s ease;
+    -webkit-transition-delay: .4s;
+}
+
+#mobile-logo {
+    max-width: 6rem;
+    display: block;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+}
+
+.menu-header {
+    display: block;
+    float: right;
+    font-size: 2.5rem;
+    padding: 2rem;
+    top: 0;
+    position: absolute;
+}
+
+.checkbox1:checked ~ .list-wrap {
+    display: block;
+    max-height: 500px;
+    transition: max-height 0.25s ease-in;
+}
+
+.checkbox1 {
+    opacity: 0;
+    top: -20px;
+    position: absolute;
+}
+
+/* HERO
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#hero {
+    padding: 2rem 10rem 13rem 10rem;
+    background-image: url(../images/hero.png);
+    background-size:fill;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 60%;
+    color: #fff;
+}
+
+#hero .button {
+    background-color: #fff;
+}
+
+#hero-text h4 {
+    margin-bottom: 0;
+}
+
+#fast-links {
+    padding: 0;
+}
+
+#commissions {
+    background-color: #2fc5ee;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+/* ABOUT
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#about img {
+    display: block;
+    max-width: 100%;
+}
+
+#about span {
+    display: block;
+    text-align: left;
+}
+
+/* FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#footer {
+    padding: 2rem;
+    font-size: 1.3rem;
+    bottom:0;
+    left:0;
+    background-color: #323238;
+    color: #7a8691
+}
+
+#footer h5 {
+    display: flex;
+    margin: 0;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+#footer h6 {
+    margin-bottom: 0rem;
+    text-align: left;
+    font-weight:900;
+}
+
+#footer a {
+    color: #d7d8d9;
+}
+
+#footer i {
+    padding-right: 3rem;
+    font-size: 1.5rem;
+}
+
+.footer-link a {
+    margin-left: 4.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+#shoutout {
+    text-align: left;
+}
+
+#shoutout h6 {
+    padding: 0;
+}
+
+#copyright {
+    padding: 1rem;
+    background-color: #222226;
+    color:#7a8691;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+/* Larger than mobile (default point when grid becomes active) */
+@media (min-width: 600px) {
+    .menu-header {
+        cursor: pointer;
+        display: none;
+    }
+
+    #nav ul {
+        align-items: center;
+    }
+    
+    .list-wrap {
+        display: flex;
+        max-height: 100%;
+    }
+
+    #logo {
+        display: flex;
+    }
+
+    #logo img {
+        max-width: 6rem;
+        display: flex;
+    }
+
+    #mobile-logo {
+        max-width: 6rem;
+        display: none;
+    }
+}
+
+/* Larger than phablet */
+@media (min-width: 900px) {
+    #nav li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #fast-links {
+        padding: 2rem;
+    }
+}
+
+/* Larger than tablet */
+@media (min-width: 1200px) {}
