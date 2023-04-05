@@ -187,6 +187,10 @@ Darkest: #222226
     display: block;
 }
 
+.bullet-points ul li {
+    list-style: circle;
+}
+
 #tos ul li {
     list-style: circle;
 }
