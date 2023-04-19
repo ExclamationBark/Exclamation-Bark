@@ -191,10 +191,6 @@ Darkest: #222226
     list-style: circle;
 }
 
-#tos ul li {
-    list-style: circle;
-}
-
 #socials {
     font-size: 5rem;
 }
@@ -263,7 +259,7 @@ Darkest: #222226
         padding: 2rem 10rem 13rem 10rem;
     }
 
-    #tos ul li {
+    .bullets ul li {
         margin-left: 1.5rem;
     }
 }
