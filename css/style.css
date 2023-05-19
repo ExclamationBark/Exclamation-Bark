@@ -7,6 +7,14 @@ Light: #d7d8d9
 Medium: #7a8691
 Dark: #323238
 Darkest: #222226
+
+EB:
+BLUE: 
+Main: 57d7fa
+Darker Main: 0088ad
+Medium: 30b0d3
+
+
 */
 
 /* NAV
@@ -81,18 +89,21 @@ Darkest: #222226
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 #hero {
-    padding: 2rem 0rem 13rem 0rem;
-    background-image: url(../images/hero.png);
-    background-size:fill;
+    padding: 2rem 0rem 2rem 0rem;
+    background-image: url(../images/background.jpg);
+    background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-position-y: 60%;
     color: #fff;
 }
 
 #hero .button {
     background-color: #fff;
     color: #323238;
+}
+
+#hero-text img {
+    width: 45rem;
 }
 
 #hero-text h4 {
@@ -104,7 +115,7 @@ Darkest: #222226
 }
 
 #commissions {
-    background-color: #2fc5ee;
+    background-color: #0088ad;
     padding: 2rem;
     margin-bottom: 2rem;
     text-align: center;
@@ -137,16 +148,14 @@ Darkest: #222226
 }
 
 #footer h5 {
-    display: flex;
-    margin: 0;
+    margin: 0 auto;
     color: #fff;
     font-size: 2rem;
-    margin-bottom: 1.5rem;
 }
 
 #footer h6 {
     margin-bottom: 0rem;
-    text-align: left;
+    text-align: center;
     font-weight:900;
 }
 
@@ -155,22 +164,13 @@ Darkest: #222226
 }
 
 #footer i {
-    padding-right: 3rem;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .footer-link a {
-    margin-left: 4.5rem;
     margin-bottom: 1rem;
-    display: flex;
-}
-
-#shoutout {
-    text-align: left;
-}
-
-#shoutout h6 {
-    padding: 0;
+    text-align: center;
 }
 
 #copyright {
@@ -185,6 +185,7 @@ Darkest: #222226
 
 .portfolio-item {
     display: block;
+    border-radius: 1rem;
 }
 
 .bullet-points ul li {
@@ -199,6 +200,13 @@ Darkest: #222226
     padding: 1rem;
 }
 
+#socials img {
+    width: 40rem;
+}
+
+#sidenote {
+    font-size: 1.25rem;
+}
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -256,7 +264,7 @@ Darkest: #222226
     }
 
     #hero {
-        padding: 2rem 10rem 13rem 10rem;
+        padding: 2rem 10rem 2rem 10rem;
     }
 
     .bullets ul li {

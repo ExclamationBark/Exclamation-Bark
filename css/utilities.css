@@ -1,0 +1,65 @@
+/* SLIDESHOW
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.slideshow-item {
+    display: none;
+}
+  
+  /* forward & Back buttons */
+.back, .forward {
+    cursor: pointer;
+    top: 48%;
+    width: auto;
+    margin-top: -23px;
+    padding: 17px;
+    color: #2fc5ee;
+    font-weight: bold;
+    font-size: 19px;
+    transition: 0.4s ease;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+ }
+  
+  /* Place the "forward button" to the right */
+.forward {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+ }
+  
+  /*when the user hovers,add a black background with some little opacity */
+.back:hover, .forward:hover {
+    color: #57d7fa;
+ }
+     
+  /* Faint animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.4s;
+    animation-name: fade;
+    animation-duration: 1.4s;
+ }
+  
+@-webkit-keyframes fade {
+    from {opacity: .5}
+    to {opacity: 2}
+ }
+  
+@keyframes fade {
+    from {opacity: .5}
+    to {opacity: 2}
+}
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Larger than mobile (default point when grid becomes active) */
+@media (min-width: 600px) {
+}
+
+/* Larger than phablet */
+@media (min-width: 900px) {    
+}
+
+/* Larger than tablet */
+@media (min-width: 1200px) {
+    
+}
