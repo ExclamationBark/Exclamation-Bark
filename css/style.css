@@ -208,6 +208,10 @@ Medium: 30b0d3
     font-size: 1.25rem;
 }
 
+.small {
+    font-size: 1rem;
+}
+
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
