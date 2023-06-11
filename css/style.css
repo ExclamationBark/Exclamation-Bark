@@ -48,7 +48,7 @@ Medium: 30b0d3
     z-index: 111;
     left: calc(50% - 2.75rem);
     background-color: #fff;
-    padding-top: 0.25rem;
+    padding-top: 1rem;
 }
 
 #logo img {
