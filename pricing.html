@@ -5,8 +5,8 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>ExclamationBark!</title>
-  <meta name="description" content="Express yourself with quality fursuits by ExclamationBark!">
+  <title>Exclamation Bark</title>
+  <meta name="description" content="Exclamation Bark: Express yourself with cute fursuits and accessories!">
   <meta name="author" content="">
 
   <!-- Mobile Specific Metas
@@ -26,41 +26,55 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon-16.ico">
+  <link rel="icon" type="image/png" href="images/EB_favicon.ico">
 
 </head>
 <body>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div id="nav" class="list-wrap">
-      <a href="/"><img id="mobile-logo" src="./images/logo.svg"></a></li>
+    <!-- Start NAV -->
+    <nav class="list-wrap">
+      <a href="/"><img id="mobile-logo" src="./images/Bark_Transparent.png"></a></li>
       <ul class="grid-container sevenths menu">
-        <li><a href="/portfolio.html">Portfolio</a></li>
-        <li><a href="/pricing.html">Pricing</a></li>
-        <li><a href="/premades.html">Premades</a></li>
-        <li id="logo"><a href="/"><img src="./images/logo.svg"></a></li>
-        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/#portfolio">Portfolio</a></li>   
+        <div aria-haspopup="true" class="dropdown">
+          <li>Fursuits<span>&#9660;</span></li>
+          <div class="dropdown-options grid-container thirds">
+            <li><a href="/pricing.html">Pricing</a></li>
+            <!-- <li><a href="/premades.html">Premades</a></li> -->
+            <li><a href="/commissions.html">Commissions</a></li>
+            <li><a href="/construction.html">Construction</a></li>
+            <li><a href="/careguide.html">Care Guide</a></li>
+          </div>
+        </div>
+        <li><a href="/faq.html">FAQs</a></li>
+        <li id="logo"><a href="/"><img src="/images/Bark_Transparent.png"></a></li>
         <li><a href="/tos.html">ToS</a></li>
         <li><a href="/contact.html">Contact</a></li>
+        <li><a href="https://ko-fi.com/ExclamationBark/shop">Shop</a></li>
       </ul>
       <button class="hamburger">
         <i class="fa fa-solid fa-bars menuIcon"></i>
         <i class="fa fa-solid fa-xmark closeIcon"></i>
       </button>
-    </div>
-    <div class="grid-container full">
-        <h1 class="full u-max-full-width">Pricing Info</h1>
+    </nav>
+    <!-- End NAV -->  
+    <div class="page-wrapper">
+        <div class="grid-container full white">
+            <h1 class="full grid-container u-max-full-width">Pricing Info</h1>
         <div>
             <p>All prices are in USD, and do not include shipping.</p>
-            <a class="button" href="/tos.html">Terms of Service</a>
+            <div>
+                <a class="button" href="/calculator.html">Estimate Calculator</a>
+            </div>    
         </div> 
         <div>
             <h2>Fursuits</h2>
             <div class="grid-container thirds">
                 <div>
                     <h3>Head</h3>
-                    <h5>$2,600+</h5>
-                    <!-- <img class="u-max-full-width" src="./images/hero.png"> -->
+                    <h5>$3,000+</h5>
+                    <img class="u-max-full-width hide-mobile" src="./images/chibi_head.png">
                     <div class="u-align-left">             
                         <strong>Includes:</strong>
                         <ul>
@@ -71,9 +85,9 @@
                     </div>
                 </div>
                 <div>
-                    <h3>Partial</h3>
-                    <h5>$3,150+</h5>
-                    <!-- <img class="u-max-full-width" src="./images/hero.png"> -->
+                    <h3>Mini Partial</h3>
+                    <h5>$3,600+</h5>
+                    <img class="u-max-full-width hide-mobile" src="./images/chibi_partial.png">
                     <div class="u-align-left">                    
                         <strong>Includes:</strong>
                         <ul>
@@ -83,10 +97,23 @@
                         </ul>
                     </div>
                 </div>
+                <!-- <div>
+                    <h3>Full Partial</h3>
+                    <h5>$4,200+</h5>
+                    <img class="u-max-full-width hide-mobile" src="./images/chibi_fullpartial.png">
+                    <div class="u-align-left">                    
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Fursuit head</li>
+                            <li>Handpaws and feetpaws</li>
+                            <li>Tail</li>
+                        </ul>
+                    </div>
+                </div> -->
                 <div>
                     <h3>Full Suit</h3>
-                    <h5>$6,500+</h5>
-                    <!-- <img class="u-max-full-width" src="./images/hero.png"> -->
+                    <h5>$7,700+</h5>
+                    <img class="u-max-full-width hide-mobile" src="./images/chibi_fullsuit.png">
                     <div class="u-align-left">                    
                         <strong>Includes:</strong>
                         <ul>
@@ -97,18 +124,20 @@
                     </div>
                 </div>
             </div>
+            </div>
             <div class="grid-container full bullet-points bullets">
                 <h3>Features</h3>
+                <div class="grid=grid-container"><a class="button" href="/construction.html">Construction Details</a></div>
                 <div class="u-align-left">
                     <h5>Heads</h5>
                     <ul>
-                        <li>Lightweight and hollow headbase</li>
-                        <li>Interior completely lined with quilted broadcloth or colorfast neoprene, with an adjustable padded head strap fitting up to 25.5”</li>
+                        <li>Lightweight and hollow TPU headbase</li>
+                        <li>Interior completely lined with quilted broadcloth or colorfast neoprene, with an adjustable elastic head strap</li>
                         <li>All seams sewn with high quality thread</li>
                         <li>Excellent vision and ventilation</li>
                         <li>3D eyes with dye sublimated eye mesh, which includes custom art on the front and solid black on the back for visibility</li>
                         <li>Soft mochi minky tongue, which can be removed via Velcro</li>
-                        <li>Soft mochi minky nose, which contains an NFC chip that leads to our website by default. It can be programmed to a different link of your choice, if desired</li>
+                        <li>Mochi minky nose</li>
                         <li>Cute felt details, including lips, eyebrows, and eyelashes</li>
                     </ul>
                     <h5>Handpaws</h5>
@@ -116,7 +145,7 @@
                         <li>Super squishy mochi minky beans</li>
                         <li>Removable neoprene pillows for finger padding</li>
                         <li>Unlined interior, with mochi minky cuff at the wrist</li>
-                        <li>Round and plush four finger design</li>
+                        <li>Round and plush four finger design, or three finger hooves</li>
                     </ul>
                     <h5>Indoor Sockpaws</h5>
                     <ul>
@@ -130,22 +159,22 @@
                         <li>Tough shoe rubber soles, for longevity</li>
                         <li>Fully lined interior with quilted broadcloth, colorfast neoprene, or spacer mesh</li>
                         <li>A more stompy style, with digi heel padding</li>
-                        <li>Lightweight foam shell for excellent shape</li>
+                        <li>Lightweight foam and TPU shell for excellent shape</li>
                         <li>Sockpaw style interior, with room for shoes</li>
                     </ul>
                     <h5>Tails</h5>
                     <ul>
-                        <li>Stiff nylon loops for durability, to be used with a belt</li>
+                        <li>Hidden belt loops, for a seamless fit</li>
                         <li>Stuffed with polyfil. Super squishy!</li>
                     </ul>
                     <h5>Padded Bodysuits</h5>
                     <ul>
-                        <li>Sturdy sewn-in spacer mesh pockets for padded digi shape, with zippers to easily adjust polyfil stuffing for cleaning and maintenance </li>
+                        <li>Sturdy sewn-in spacer mesh pockets for padded digi or planti shape, with zippers to easily adjust polyfil stuffing for cleaning and maintenance </li>
                         <li>Zip-on outdoor feet paws</li>
                         <li>Lined front zipper for comfort</li>
                         <li>Double machine stitched seams for durability</li>
-                        <li>Tail attached via belt loops</li>
-                        <li><strong>No DTD required!</strong> I work off around 20 measurements and 3D model the bodysuit to your desired shape</li>
+                        <li>Tail attached via zipper</li>
+                        <li><strong>No DTD required!</strong> I work off around 20 measurements and 3 photos, and 3D model the bodysuit to your desired shape</li>
                     </ul>
                 </div>
                 <h3>Extras</h3>
@@ -153,35 +182,38 @@
                     <div>
                         <h5>Add-ons</h5>
                         <ul>
+                            <li>Removable fan in muzzle: +$75</li>
+                            <li>Velcro eyelids: +$50 per pair</li>
+                            <li>Extra tongues: +$30 each</li>
                             <li>Mochi minky claws: +$50</li>
-                            <li>Velcro eyelids: +$35 per pair</li>
-                            <li>Extra tongues: +$20 each</li>
                             <li>Additional furs: +$55 each</li>
                         </ul> 
                     </div>
                     <div>
                         <h5>Parts</h5>
                         <ul>
-                            <li>Handpaws: $450+</li>
-                            <li>Indoor sockpaws: $500+</li>
-                            <li>Outdoor feetpaws: $550+</li>
-                            <li>Tails: $100+</li>
-                            <li>Padded bodysuit: $2,800+</li>
-                            <span><strong>Available for previous customers only</strong></span>
+                            <li>Handpaws: $500+</li>
+                            <li>Indoor sockpaws: $600+</li>
+                            <li>Outdoor feetpaws: $600+</li>
+                            <li>Tails: $150+</li>
+                            <li>Padded bodysuit: $3,500+</li>
+                            <span><strong>All additional parts must be purchased at the start of a commission.</strong> I cannot guarantee matching fur colors after!</span>
                         </ul>
                     </div>
-                </div>                
+                </div>           
                 <h2>Props</h2>
                 <div>
                     <h5>No longer available for commission</h5>
                     <div class="u-align-left">             
-                        <p>Premade props will be available on our <a href="https://exclamationbark.bigcartel.com"><strong>shop</strong></a> or at conventions only.</p>
+                        <p>Premade props will be available on our <a href="https://ko-fi.com/exclamationbark/shop/"><strong>shop</strong></a> or at conventions only.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="copyright">© 2023 ExclamationBark</div>
+    </div>
+    </div>
+    <div id="copyright">© 2026 ExclamationBARK</div>
 
     <!-- End Document
       –––––––––––––––––––––––––––––––––––––––––––––––––– -->

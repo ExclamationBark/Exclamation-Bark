@@ -5,9 +5,8 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>ExclamationBark!</title>
-  
-  <meta name="description" content="Express yourself with quality fursuits by ExclamationBark!">
+  <title>Exclamation Bark</title>
+  <meta name="description" content="Exclamation Bark: Express yourself with cute fursuits and accessories!">
   <meta name="author" content="">
 
   <!-- Mobile Specific Metas
@@ -27,72 +26,120 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon-16.ico">
+  <link rel="icon" type="image/png" href="images/EB_favicon.ico">
 
 </head>
 <body>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div id="nav" class="list-wrap">
-      <a href="/"><img id="mobile-logo" src="./images/logo.svg"></a></li>
+    <!-- Start NAV -->
+    <nav class="list-wrap">
+      <a href="/"><img id="mobile-logo" src="./images/Bark_Transparent.png"></a></li>
       <ul class="grid-container sevenths menu">
-        <li><a href="/portfolio.html">Portfolio</a></li>
-        <li><a href="/pricing.html">Pricing</a></li>
-        <li><a href="/premades.html">Premades</a></li>
-        <li id="logo"><a href="/"><img src="./images/logo.svg"></a></li>
-        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/#portfolio">Portfolio</a></li>   
+        <div aria-haspopup="true" class="dropdown">
+          <li>Fursuits<span>&#9660;</span></li>
+          <div class="dropdown-options grid-container thirds">
+            <li><a href="/pricing.html">Pricing</a></li>
+            <!-- <li><a href="/premades.html">Premades</a></li> -->
+            <li><a href="/commissions.html">Commissions</a></li>
+            <li><a href="/construction.html">Construction</a></li>
+            <li><a href="/careguide.html">Care Guide</a></li>
+          </div>
+        </div>
+        <li><a href="/faq.html">FAQs</a></li>
+        <li id="logo"><a href="/"><img src="/images/Bark_Transparent.png"></a></li>
         <li><a href="/tos.html">ToS</a></li>
         <li><a href="/contact.html">Contact</a></li>
+        <li><a href="https://ko-fi.com/ExclamationBark/shop">Shop</a></li>
       </ul>
       <button class="hamburger">
         <i class="fa fa-solid fa-bars menuIcon"></i>
         <i class="fa fa-solid fa-xmark closeIcon"></i>
       </button>
-    </div>
-    <div id="hero">
-      <div class="grid-container full">
-        <span id="hero-text">
-          <img class="u-max-full-width" src="/images/logo_update.png">
-          <h4>Express yourself!</h4>
-        </span>
-        <div class="grid-container halves" id="fast-links">
-          <a class="button" href="/premades.html">Premades</a>
-          <a class="button" href="/faq.html">FAQs</a>
-        </div>
+    </nav>
+    <!-- End NAV -->    
+    <div id="hero" class="grid">
+      <img id="banner" class="hide-mobile" src="/images/Hero_Pieces_full.webp">
+      <img id="mobile-banner" class="hide-full" src="/images/Hero_Pieces_mobile.png">
+      <div class="hide-full grid-container halves" id="fast-links">
+        <a class="button" href="/commissions.html">Commissions</a>
+        <a class="button" target="_blank" rel="noopener noreferrer" href="https://ko-fi.com/ExclamationBark/shop">Shop</a>
+      </div>
+      </div>
+      <div id="commission-status">
+        <span>Commissions are closed, quotes are open!</span>
+      </div>
+    <div class="grid-container full u-align-left" id="about">
+        <h1><strong>Welcome!</strong></h1>
+          
+          <p>We're <strong>ExclamationBARK</strong>, and we specialize in cute critters, as well as squishy mochi minky props and accessories.</p>
+
+          <p>We pride ourselves with high quality, comfortable work, with excellent vision and ventilation. Everything is completely customized, and we love to be on the cutting edge of modern fursuit making methods.</p>
+
+          <p>We can't wait to make your characters come to life! Please don't hesitate to <strong><a href="/contact.html">reach out</a></strong>!</p>
+      </div>
+      <div class="hide-mobile grid-container halves" id="fast-links">
+        <a class="button" href="/commissions.html">Commissions</a>
+        <a class="button" target="_blank" rel="noopener noreferrer" href="https://ko-fi.com/ExclamationBark/shop">Shop</a>
+      </div>
+        
+    <div id="portfolio">
+      <h1 class="full u-max-full-width">Portfolio</h1>
+      <div class="grid-container full portfolio">
+          <h3>Fursuits</h3>
+          <div class="grid-container quarters" id="fursuit">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/cody_full.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/cody.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/taro_full.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/taro.jpg"> 
+
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/tog.jpg">          
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/ava.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/darling.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/mendomi.jpg">
+
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/pepper.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/gogurt.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/rayne.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/ink.jpg">
+          </div>
+      </div>
+      <div class="grid-container full portfolio">
+          <h3>Parts & Props</h3>
+          <div class="grid-container quarters" id="props">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/props/bell_collar_silver.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/props/bell_collar_gold.jpg">
+            <!-- <img class="portfolio-item u-max-full-width" src="/images/portfolio/convention/bell_collar_detail.jpg"> -->
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/props/collar_heart.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/props/paws_lava.jpg">
+            <!--<img class="portfolio-item u-max-full-width" src="/images/portfolio/convention/paws_pumpkin.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/convention/paws_rainbow.jpg"> -->
+          </div>
       </div>
     </div>
-    <div id="commissions">
-      <span></span>
-    </div>
-    <div class="grid-container full">  
-      <h3>Welcome!</h3>
-        <p>Hi, we're ExclamationBark! We specialize in cute fursuits, as well as squishy mochi minky props and accessories.</p>
-        <p>You can find us on most social media <strong><a href="/contact.html">@ExclamationBark</a></strong>.</p>
-    </div>
     <div id="footer">
-      <h5 class="grid-container full">Contact</h5>
-        <div class="grid-container thirds" id="links">
+      <div class="grid-container thirds">
           <div class="footer-link">
-            <h6><i class="fa-solid fa-envelope"></i></h6>
+            <h6><i class="fa-solid fa-envelope"></i>Email:</h6>
             <a href="mailto:contact@ExclamationBark.com">contact@ExclamationBark.com</a>
           </div>
           <div class="footer-link">
-            <h6><i class="fa-brands fa-telegram"></i></h6></i>
-            <a href="https://t.me/ExclamationBarkUpdates">ExclamationBark</a>
+            <h6><i class="fa-brands fa-telegram"></i>Telegram:</h6></i>
+            <a href="https://t.me/ExclamationBark">ExclamationBark</a>
           </div>
           <div class="footer-link">          
-            <h6><i class="fa-solid fa-at"></i></h6>
+            <h6><i class="fa-solid fa-at"></i>Socials:</h6>
             <a href="/contact.html">@ExclamationBark</a>
           </div>
         </div>
-        <div></div>
-      </div>
-      
+      </div>  
     </div>
-    <div id="copyright">© 2023 ExclamationBark</div>
+  </div>
+  <div id="copyright">© 2026 ExclamationBARK</div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

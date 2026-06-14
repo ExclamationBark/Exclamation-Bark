@@ -44,17 +44,17 @@ html {
 
 	/* default theme: light background, dark text, blue accent */
 	--theme-hue: 0;					/* white */
-	--accent-hue: #57d7fa;			/* blue */
+	--accent-hue: #23b5f6;			/* blue */
 
 	--text-color-richer: hsl(var(--theme-hue), 0%, 5%);			/* #0d0d0d		*/
-	--text-color-normal: hsl(var(--theme-hue), 0%, 13%);		/* #222222 		text color; button:hover:focus color */
-	--text-color-softer: hsl(var(--theme-hue), 0%, 33%);		/* #555555 		button color; button:hover border */
+	--text-color-normal: #10285e;		/* #222222 		text color; button:hover:focus color */
+	--text-color-softer: #3f6fda;		/* #555555 		button color; button:hover border */
 
-  --accent-color: hsl(var(--accent-hue), 86%, 57%);				/* #33C3F0 		link; button-primary bg+border; textarea,select:focus border */
-  --accent-color-hover: hsl(var(--accent-hue), 76%, 49%);	/* #1EAEDB 		link hover; button-primary:hover:focus bg+border */
+  --accent-color: #10285e;				/* #33C3F0 		link; button-primary bg+border; textarea,select:focus border */
+  --accent-color-hover: #10285e;	/* #1EAEDB 		link hover; button-primary:hover:focus bg+border */
 
-  --border-color: hsl(var(--theme-hue), 0%, 73%);					/* #bbbbbb		button border */
-	--border-color-softer: hsl(var(--theme-hue), 0%, 82%);	/* #d1d1d1		textarea,select,code,td,hr border	 */
+  --border-color: #3f6fda;					/* #bbbbbb		button border */
+	--border-color-softer: #10285e;	/* #d1d1d1		textarea,select,code,td,hr border	 */
 	
 	--background-color: white;														/* transparent body background; textarea,select background */
 	--background-color-softer: hsl(var(--theme-hue), 0%, 95%);
@@ -142,6 +142,9 @@ html {
 	}
 	
 	/* basic grids */
+  .grid-container.ninths {
+		grid-template-columns: repeat(9, 1fr);
+	}
   .grid-container.sevenths {
 		grid-template-columns: repeat(7, 1fr);
 	}
@@ -179,7 +182,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-size: 1.6rem;		/* changed from 15px in orig skeleton */
+  font-size: 1.8rem;		/* changed from 15px in orig skeleton */
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -231,6 +234,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
+  background-color: #fff;
   display: inline-block;
   height: 38px;
   padding: 0 30px;
@@ -243,7 +247,6 @@ input[type="button"] {
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  background-color: transparent;
   border-radius: 4px;
   border: 1px solid var(--border-color);
   cursor: pointer;
@@ -335,7 +338,7 @@ label,
 legend {
   display: block;
   margin-bottom: .5rem;
-  font-weight: 600; }
+  font-weight: 400; }
 fieldset {
   padding: 0;
   border-width: 0; }

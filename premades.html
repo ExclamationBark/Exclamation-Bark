@@ -5,8 +5,8 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>ExclamationBark!</title>
-  <meta name="description" content="Express yourself with quality fursuits by ExclamationBark!">
+  <title>Exclamation Bark</title>
+  <meta name="description" content="Exclamation Bark: Express yourself with cute fursuits and accessories!">
   <meta name="author" content="">
 
   <!-- Mobile Specific Metas
@@ -22,36 +22,46 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/barebones.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/utilities.css">
   <link rel="stylesheet" href="https://kit.fontawesome.com/32bceee90f.css" crossorigin="anonymous">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon-16.ico">
+  <link rel="icon" type="image/png" href="images/EB_favicon.ico">
 
 </head>
 <body>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div id="nav" class="list-wrap">
-      <a href="/"><img id="mobile-logo" src="./images/logo.svg"></a></li>
+    <!-- Start NAV -->
+    <nav class="list-wrap">
+      <a href="/"><img id="mobile-logo" src="./images/Bark_Transparent.png"></a></li>
       <ul class="grid-container sevenths menu">
-        <li><a href="/portfolio.html">Portfolio</a></li>
-        <li><a href="/pricing.html">Pricing</a></li>
-        <li><a href="/premades.html">Premades</a></li>
-        <li id="logo"><a href="/"><img src="./images/logo.svg"></a></li>
-        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/#portfolio">Portfolio</a></li>   
+        <div aria-haspopup="true" class="dropdown">
+          <li>Fursuits<span>&#9660;</span></li>
+          <div class="dropdown-options grid-container thirds">
+            <li><a href="/pricing.html">Pricing</a></li>
+            <!-- <li><a href="/premades.html">Premades</a></li> -->
+            <li><a href="/commissions.html">Commissions</a></li>
+            <li><a href="/construction.html">Construction</a></li>
+            <li><a href="/careguide.html">Care Guide</a></li>
+          </div>
+        </div>
+        <li><a href="/faq.html">FAQs</a></li>
+        <li id="logo"><a href="/"><img src="/images/Bark_Transparent.png"></a></li>
         <li><a href="/tos.html">ToS</a></li>
         <li><a href="/contact.html">Contact</a></li>
+        <li><a href="https://ko-fi.com/ExclamationBark/shop">Shop</a></li>
       </ul>
       <button class="hamburger">
         <i class="fa fa-solid fa-bars menuIcon"></i>
         <i class="fa fa-solid fa-xmark closeIcon"></i>
       </button>
-    </div>
-    <div class="grid-container full">
-        <h1 class="full u-max-full-width">Premades</h1>
-    </div>
+    </nav>
+    <!-- End NAV -->  
+    <div class="page-wrapper">
+    <div class="grid-container full white">
+        <h1>Premades</h1>
     <div class="grid-container full portfolio">
         <!-- ITEM ONE -->
         <div class="grid-container full">
@@ -59,59 +69,90 @@
                 <div>
                     <div class="slideshow-container fade">
                         <div class="slideshow-item">
-                            <img class="portfolio-item u-max-full-width" src="/images/premades/latte1.jpg">
+                            <img class="portfolio-item u-max-full-width" src="/images/premades/wm7.jpg" onclick="plusSlides(1)">
                         </div>
                         <div class="slideshow-item">
-                            <img class="portfolio-item u-max-full-width" src="/images/premades/latte2.jpg">
+                            <img class="portfolio-item u-max-full-width" src="/images/premades/wm0.jpg" onclick="plusSlides(1)">
                         </div>
                         <div class="slideshow-item">
-                            <img class="portfolio-item u-max-full-width" src="/images/premades/latte3.jpg">
+                            <img class="portfolio-item u-max-full-width" src="/images/premades/wm1.jpg" onclick="plusSlides(1)">
                         </div>
                         <div class="slideshow-item">
-                            <img class="portfolio-item u-max-full-width" src="/images/premades/latte4.jpg">
+                            <img class="portfolio-item u-max-full-width" src="/images/premades/wm2.jpg" onclick="plusSlides(1)">
+                        </div>
+                        <div class="slideshow-item">
+                            <img class="portfolio-item u-max-full-width" src="/images/premades/wm3.jpg" onclick="plusSlides(1)">
+                        </div>
+                        <div class="slideshow-item">
+                            <img class="portfolio-item u-max-full-width" src="/images/premades/wm4.jpg" onclick="plusSlides(1)">
+                        </div>
+                        <div class="slideshow-item">
+                            <img class="portfolio-item u-max-full-width" src="/images/premades/wm5.jpg" onclick="plusSlides(1)">
+                        </div>
+                        <div class="slideshow-item">
+                            <img class="portfolio-item u-max-full-width" src="/images/premades/wm9.jpg" onclick="plusSlides(1)">
+                        </div>
+                        <div class="slideshow-item">
+                            <img class="portfolio-item u-max-full-width" src="/images/premades/wm10.jpg" onclick="plusSlides(1)">
+                        </div>
+                        <div class="slideshow-item">
+                            <img class="portfolio-item u-max-full-width" src="/images/premades/wm11.jpg" onclick="plusSlides(1)">
                         </div>
                         <!-- Back and forward buttons -->
-                        <div>
+                        <div class="slideshow-buttons">
                             <a class="back" onclick="plusSlides(-1)">&#10094;</a>
                             <a class="forward" onclick="plusSlides(1)">&#10095;</a>
                         </div>
                     </div>
                 </div>
                 <div class="u-align-left">
-                    <h3>Latte</h3>
-                    <h5>$2,300</h5>
+                    <h3>Nocturne</h3>
+                    <h5>Sold!</h5>
                     <strong>Features:</strong>
                     <div class="bullet-points">
                         <ul>
+                            <li>Built on a flexible TPU headbase</li>
+                            <li>Amazing vision through dye sublimated eyes. Completely waterproof!</li>
+                            <li>Removable magnetic hair poof</li>
+                            <li>"Pickable" nose</li>
                             <li>Fully lined interior with quilted broadcloth</li>
-                            <li>Adjustable padded head strap to fit up to a 25.5" head circumference</li>
-                            <li>Great vision!</li>
-                            <li>Dye sublimated eyes, so they're completely waterproof</li>
-                            <li>Ventilation through the eyes and the mouth</li>
-                            <li>Very lightweight foam base</li>
+                            <li>Adjustable elastic straps attached to a padded forehead rest. Fits up to 24" head</li>
+                            <li>Great ventilation through the eyes and mouth</li>
                             <li>Mochi minky accents</li>
-                            <li>NFC chip in nose</li>
+                            <li>Velcro tongue</li>
+                            <li>Hidden belt loops on tail</li>
                         </ul>
-                        <div id="sidenote">
-                            <p><strong>Note:</strong> There is a wrinkle in her right ear, and the inner mouth lining is a bit baggy. While we strive for perfection, we're only human and sometimes things happen. Thanks for understanding!</p>
-                        </div>
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Black velcro eyelids</li>
+                            <li>Magnetic hair poof</li>
+                            <li>34" Tail</li>
+                            <li>Double sided fursuit brush</li>
+                        </ul>
+                        <!-- <div id="sidenote">
+                            <p><strong>Note:</strong> None!</p>
+                        </div> -->
                     </div>
                 </div>
             </div>
             <div>
                 <div>
                     <h4>Fall in love? Send us an email to adopt!</h4>
-                    <a class="button" href="mailto:contact@ExclamationBark.com">contact@ExclamationBark.com</a>
-                    <p class="small"><br>Please review our <strong><a href="/tos.html">Terms of Service</a></strong> before inquiring about an available premade. You must be 18 or older to purchase.</p>
+                    <a class="button" href="mailto:contact@ExclamationBARK.com">contact@ExclamationBARK.com</a>
+                    <p class="small"><br>Please review our <strong><a href="/tos.html">Terms of Service</a></strong> before inquiring about an available premade. You must be 18 or older to purchase. <strong>Photo ID required for verification.</strong></p>
                 </div> 
             </div>
         </div>
         <!-- END ITEM ONE -->
     </div>
-    <div id="copyright">© 2023 ExclamationBark</div>
+    </div>
+    </div>
+    
+    <div id="copyright">© 2026 ExclamationBARK</div>
 
     <!-- End Document
       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
       <script src="js/script.js"></script>
+      <script src="js/slider.js"></script>
     </body>
     </html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://kit.fontawesome.com/32bceee90f.js" crossorigin="anonymous"></script>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Exclamation Bark</title>
+  <meta name="description" content="Exclamation Bark: Express yourself with cute fursuits and accessories!">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/barebones.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://kit.fontawesome.com/32bceee90f.css" crossorigin="anonymous">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/EB_favicon.ico">
+
+</head>
+<body>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Start NAV -->
+    <nav class="list-wrap">
+      <a href="/"><img id="mobile-logo" src="./images/Bark_Transparent.png"></a></li>
+      <ul class="grid-container sevenths menu">
+        <li><a href="/#portfolio">Portfolio</a></li>   
+        <div aria-haspopup="true" class="dropdown">
+          <li>Fursuits<span>&#9660;</span></li>
+          <div class="dropdown-options grid-container thirds">
+            <li><a href="/pricing.html">Pricing</a></li>
+            <!-- <li><a href="/premades.html">Premades</a></li> -->
+            <li><a href="/commissions.html">Commissions</a></li>
+            <li><a href="/construction.html">Construction</a></li>
+            <li><a href="/careguide.html">Care Guide</a></li>
+          </div>
+        </div>
+        <li><a href="/faq.html">FAQs</a></li>
+        <li id="logo"><a href="/"><img src="/images/Bark_Transparent.png"></a></li>
+        <li><a href="/tos.html">ToS</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="https://ko-fi.com/ExclamationBark/shop">Shop</a></li>
+      </ul>
+      <button class="hamburger">
+        <i class="fa fa-solid fa-bars menuIcon"></i>
+        <i class="fa fa-solid fa-xmark closeIcon"></i>
+      </button>
+    </nav>
+    <!-- End NAV -->  
+    <div class="page-wrapper">
+    <div class="grid-container full white">
+      <h1>Estimate Calculator</h1>
+      <p>This calculator can be used to get a rough idea of what a project might cost. This is not an official quote.</p>
+      
+      <div class="grid-container full u-align-left" id="estimate-form">
+        <form action="" id="calculator" onsubmit="return false;">
+          <fieldset>
+            <legend>Commission Type</legend> 
+            <select id="commType" name="commType" onchange="calculateTotal(); changeType();">
+              <option value="head">Head</option>
+              <option value="partial">Partial</option>
+              <option value="fullsuit">Fullsuit</option>
+            </select>
+
+            <legend>Number of Fur Colors</legend>
+            <select id="furColors" name="furColors" onchange="calculateTotal()">
+              <option value="fur1">1-2</option>
+              <option value="fur3">3</option>
+              <option value="fur4">4</option>
+              <option value="fur5">5</option>
+              <option value="fur6">6+</option>
+            </select>
+          
+            <legend class="with-tooltip">Number of Mochi Colors <i class="fa-solid fa-circle-exclamation tooltip right"></i><p class="on-hover">Mochi minky is used on the tongue, nose, teeth, claws, paw pads, and generally anything else smooth and not fluffy.</p></legend>
+            
+            <select name="mochiColors" onchange="calculateTotal()">
+              <option value="mochi1">1-2</option>
+              <option value="mochi3">3</option>
+              <option value="mochi4">4</option>
+              <option value="mochi5">5</option>
+              <option value="mochi6">6+</option>
+            </select>
+            
+            <legend class="with-tooltip">Design Complexity <i class="fa-solid fa-circle-exclamation tooltip right"></i><p class="on-hover">This is an approximation only, and will be decided based on my own discretion.</p></legend>
+            <div>
+              <label for="simple"><input type="radio" id="simple" name="complexity" value="Simple" checked onchange="calculateTotal()">Simple: No markings, or very few large markings</label>
+              <label for="moderate"> <input type="radio" id="moderate" name="complexity" value="Moderate" onchange="calculateTotal()">Moderate: Some large markings, few large spots or stripes</label>
+              <label for="complex"><input type="radio" id="complex" name="complexity" value="Complex" onchange="calculateTotal()">Complex: Multiple spots or stripes, or a couple intricate markings</label>
+              <label for="veryComplex"><input type="radio" id="veryComplex" name="complexity" value="Very Complex" onchange="calculateTotal()">Very Complex: Intricate markings, many spots or stripes, asymmetry</label>
+            </div>
+            <!-- START HEAD -->
+            <div id="head" class="calc-section">
+              <fieldset>
+                <legend><strong>Fursuit Head</strong></legend>
+                
+                <div class="bullets bullet-points"> 
+                  Default options include: 
+                  <ul>
+                    <li>Lined head</li>
+                    <li>Static jaw</li>
+                    <li>3D eyes with dye sublimated mesh</li>
+                    <li>Smooth mochi minky nose</li>
+                    <li>Velcro mochi minky tongue</li>
+                  </ul>
+                </div>
+                <strong>Add-Ons</strong>
+                <div id="addonCalc">
+                  <label for="fan"><input type="checkbox" id="fan" name="head-addons" value="fan" onchange="calculateTotal()"/>Fan in Muzzle (+$75)</label>
+                  <label for="eyelids"><input type="checkbox" id="eyelids" name="head-addons" value="eyelids" onchange="calculateTotal()"/>Velcro Eyelids (+$50)</label>
+                  <label for="tongues"><input type="checkbox" id="tongues" name="head-addons" value="tongues" onchange="calculateTotal()"/>Extra Tongue (+$30)</label>
+                  <label for="teeth"><input type="checkbox" id="teeth" name="head-addons" value="teeth" onchange="calculateTotal()"/>Small Fangs (+$30)</label>
+                  <label for="bangs"><input type="checkbox" id="bangs" name="head-addons" value="bangs" onchange="calculateTotal()"/>Hair Poof or Bangs ($50+)</label>
+                  <label for="mohawk"><input type="checkbox" id="mohawk" name="head-addons" value="mohawk" onchange="calculateTotal()"/>Mohawk ($100+)</label>
+                  <label for="hair"><input type="checkbox" id="hair" name="head-addons" value="hair" onchange="calculateTotal()"/>Other Hair Styles ($150+)</label>
+                  <label for="piercings"><input type="checkbox" id="piercings" name="head-addons" value="piercings" onchange="calculateTotal()"/>Piercings ($50+)</label>
+                  <label for="horns"><input type="checkbox" id="horns" name="head-addons" value="horns" onchange="calculateTotal()"/>Horns ($50+)</label>
+                  <label for="antlers"><input type="checkbox" id="antlers" name="head-addons" value="antlers" onchange="calculateTotal()"/>Antlers ($250+)</label>
+                </div>
+              </fieldset>
+            </div>
+            <!-- END HEAD -->
+            <!-- START PARTIAL -->
+            <div id="partial" class="calc-section">
+              <fieldset>
+                <legend><strong>Handpaws</strong></legend>
+                <div class="bullets bullet-points"> 
+                  Default options include:
+                  <ul>
+                    <li>Puffy 4 finger design or 3 finger hooves</li>
+                    <li>Unlined, with finger pillow padding</li>
+                    <li>Mochi minky paw pads</li>
+                    <li>No claws</li>
+                  </ul>
+                </div>
+                <strong>Add-Ons</strong>
+                <label for="handpaw-claws"><input type="checkbox" id="handpaw-claws" name="partial-addons" value="handpaw-claws" onchange="calculateTotal()"/>Plush Claws (+$50)</label> 
+              </fieldset>
+            </div>
+
+            <div id="feetpaws-partial" class="calc-section">
+              <fieldset>
+                <legend><strong>Feetpaws</strong></legend>
+                <strong>Note:</strong> Not included with mini partials by default.
+                <div class="bullets bullet-points"> 
+                  Default options include: <ul>
+                    <li>Fully lined with quilted broadcloth, colorfast neoprene, or spacer mesh</li>
+                    <li>No claws</li>
+                  </ul>
+                </div>
+
+                <strong>Add-Ons</strong>
+                <label for="sockpaws"><input type="checkbox" id="sockpaws" name="partial-addons" value="sockpaws" onchange="calculateTotal()"/>Add Indoor Sockpaws (+$600)</label>
+                <label for="feetpaws"><input type="checkbox" name="partial-addons" value="feetpaws" onchange="calculateTotal()"/>Add Outdoor Feetpaws (+$600)</label>
+                <label for="feetpaw-claws"><input type="checkbox" id="feetpaw-claws" name="partial-addons" value="feetpaw-claws" onchange="calculateTotal()"/>Plush Claws (+$50)</label> 
+              </fieldset>
+            </div>
+
+            <div id="tail-partial">
+            <fieldset>
+              <legend><strong>Tail</strong></legend>
+              <div class="bullets bullet-points"> 
+                Default options include: <ul>
+                  <li>Attached via belt loops</li>
+                  <li>Medium size</li>
+                  <li>Standard canine style or nub</li>
+                </ul>
+              </div>
+              <strong>Add-Ons</strong>
+              <label for="tail-nub"><input type="checkbox" id="tail-nub" name="partial-addons" value="tail-nub" onchange="calculateTotal()"/>Nub Tail</label>
+              <label for="tail-curly"><input type="checkbox" id="tail-curly" name="partial-addons" value="tail-curly" onchange="calculateTotal()"/>Curly Canine Tail ($150+)</label>
+              <label for="tail-feline"><input type="checkbox" id="tail-feline" name="partial-addons" value="tail-feline" onchange="calculateTotal()"/>Long Feline Tail ($150+)</label>
+              <label for="tail-floor"><input type="checkbox" id="tail-floor" name="partial-addons" value="tail-floor" onchange="calculateTotal()"/>Floor Dragger Tail ($250+)</label>
+              <label for="tail-articulated"><input type="checkbox" id="tail-articulated" name="partial-addons" value="tail-articulated" onchange="calculateTotal()"/>Raptor/Dino Tail ($600+)</label>
+            </fieldset>
+            </div>
+            <!-- END PARTIAL -->
+            <!-- START FULLSUIT -->
+            <div id="fullsuit" class="calc-section">
+              <fieldset>
+                <legend><strong>Handpaws</strong></legend>
+                <div class="bullets bullet-points"> 
+                  Default options include:
+                  <ul>
+                    <li>Puffy 4 finger design or 3 finger hooves</li>
+                    <li>Unlined, with finger pillow padding</li>
+                    <li>Mochi minky paw pads</li>
+                    <li>No claws</li>
+                  </ul>
+                </div>
+                <strong>Add-Ons</strong>
+                <label for="handpaw-claws"><input type="checkbox" id="handpaw-claws" name="fullsuit-addons" value="handpaw-claws" onchange="calculateTotal()"/>Plush Claws (+$50)</label> 
+              </fieldset>
+
+              <fieldset>
+              <legend><strong>Feetpaws</strong></legend>
+              <div class="bullets bullet-points"> 
+                Default options include: <ul>
+                  <li>Zippers attaching to bodysuit</li>
+                  <li>Tough shoe rubber bottoms</li>
+                  <li>Fully lined with quilted broadcloth and/or spacer mesh</li>
+                  <li>Sockpaw-styled interior, with room for shoes</li>
+                  <li>No claws</li>
+                </ul>
+              </div>
+              <strong>Add-Ons</strong>
+                <label for="feetpaw-claws"><input type="checkbox" id="feetpaw-claws" name="fullsuit-addons" value="feetpaw-claws" onchange="calculateTotal()"/>Plush Claws (+$50)</label> 
+                <!-- <label for="feetpaw-indoor"><input type="checkbox" id="feetpaw-indoor" name="fullsuit-addons" value="feetpaw-indoor" onchange="calculateTotal()"/>Additional Pair of Feet (Indoor) (+$600)</label>  -->
+              </fieldset>
+        
+              <div id="tail-fullsuit">
+              <fieldset>
+                <legend><strong>Tail</strong></legend>
+                <div class="bullets bullet-points"> 
+                  Default options include: <ul>
+                    <li>Attached via belt loops</li>
+                    <li>Medium size</li>
+                    <li>Standard canine style or nub</li>
+                  </ul>
+                </div>
+                <strong>Add-Ons</strong>
+                <label for="tail-nub"><input type="checkbox" id="tail-nub" name="fullsuit-addons" value="tail-nub" onchange="calculateTotal()"/>Nub Tail</label>
+                <label for="tail-curly"><input type="checkbox" id="tail-curly" name="fullsuit-addons" value="tail-curly" onchange="calculateTotal()"/>Curly Canine Tail ($150+)</label>
+                <label for="tail-feline"><input type="checkbox" id="tail-feline" name="fullsuit-addons" value="tail-feline" onchange="calculateTotal()"/>Long Feline Tail ($150+)</label>
+                <label for="tail-floor"><input type="checkbox" id="tail-floor" name="fullsuit-addons" value="tail-floor" onchange="calculateTotal()"/>Floor Dragger Tail ($250+)</label>
+                <label for="tail-articulated"><input type="checkbox" id="tail-articulated" name="fullsuit-addons" value="tail-articulated" onchange="calculateTotal()"/>Raptor/Dino Tail ($600+)</label>
+              </fieldset>
+            </div> 
+            <fieldset>
+                <legend><strong>Bodysuit</strong></legend>
+                <div class="bullets bullet-points"> 
+                  Default options include: <ul>
+                    <li>Zippers attaching to outdoor feetpaws</li>
+                    <li>Medium tail attached via zipper</li>
+                    <li>Spacer mesh padding pockets (digi padding or padded planti)</li>
+                  </ul>
+                </div>
+                <strong>Add-Ons</strong>
+                <label for="wings-small"><input type="checkbox" id="wings-small" name="fullsuit-addons" value="wings-small" onchange="calculateTotal()"/>Small Attached Wings ($400+)</label>
+                <label for="spikes"><input type="checkbox" id="spikes" name="fullsuit-addons" value="spikes" onchange="calculateTotal()"/>Spikes/Spines ($200+)</label>
+                <label for="hidden-pocket"><input type="checkbox" id="hidden-pocket" name="fullsuit-addons" value="hidden-pocket" onchange="calculateTotal()"/>Hidden Pocket (+$50)</label>
+              </fieldset>
+            </div>
+            <!-- END FULLSUIT -->
+            </div>
+          </fieldset>
+        </form>
+        <h4 id="estimate">Estimated Price:</h4>
+        <h2 id="totalPrice">$3000</h2>
+        <p><strong>Note</strong>: This is a general estimate and is not an official quote.</p>
+    </div>
+    </div>
+
+<div id="copyright">© 2026 ExclamationBARK</div>
+
+<script src="js/script.js"></script>
+<script src="js/calculator.js"></script>
+</body>
