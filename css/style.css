@@ -221,6 +221,10 @@ nav li #logo {
     font-size: 2rem;
 }
 
+#commission-status a {
+    color: #fff;
+}
+
 #socials {
     font-size: 5rem;
 }
