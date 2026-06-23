@@ -2,6 +2,7 @@
 var base_prices = new Array();
 base_prices["head"]=3000;
 base_prices["partial"]=3600;
+base_prices["partial-full"]=4200;
 base_prices["fullsuit"]=7700;
 
 var fur_prices = new Array();
@@ -30,17 +31,26 @@ head_addon_prices["piercings"] = 50;
 head_addon_prices["horns"] = 50;
 head_addon_prices["antlers"] = 250;
 
-
 var partial_addon_prices = new Array();
 partial_addon_prices["handpaw-claws"] = 50;
-partial_addon_prices["feetpaws"] = 600;
-partial_addon_prices["sockpaws"] = 600;
-partial_addon_prices["feetpaw-claws"] = 50;
+// partial_addon_prices["feetpaws"] = 600;
+// partial_addon_prices["sockpaws"] = 600;
+// partial_addon_prices["feetpaw-claws"] = 50;
 partial_addon_prices["tail-nub"] = 0;
 partial_addon_prices["tail-curly"] = 150;
 partial_addon_prices["tail-feline"] = 150;
 partial_addon_prices["tail-floor"] = 250;
 partial_addon_prices["tail-articulated"] = 600;
+
+var partial_full_addon_prices = new Array();
+partial_full_addon_prices["feetpaws"] = 600;
+partial_full_addon_prices["sockpaws"] = 600;
+partial_full_addon_prices["feetpaw-claws"] = 50;
+partial_full_addon_prices["tail-nub"] = 0;
+partial_full_addon_prices["tail-curly"] = 150;
+partial_full_addon_prices["tail-feline"] = 150;
+partial_full_addon_prices["tail-floor"] = 250;
+partial_full_addon_prices["tail-articulated"] = 600;
 
 var fullsuit_addon_prices = new Array();
 fullsuit_addon_prices["wings-small"] = 400;
@@ -122,6 +132,7 @@ function getAddonsPrice() {
     var theForm = document.forms["calculator"];
 	var headAddons = theForm.elements["head-addons"];
     var partialAddons = theForm.elements["partial-addons"];
+    var partialFullAddons = theForm.elements["partial-full-addons"];
     var fullsuitAddons = theForm.elements["fullsuit-addons"];
 
     const expr = selectedValue;
@@ -141,14 +152,21 @@ function getAddonsPrice() {
                 addonsCost = addonsCost + partial_addon_prices[partialAddons[i].value];
             }
         };
-        break;
+    break;
+    case 'partial-full':
+    for (var i = 0; i < partialFullAddons.length; i++) {
+        if (partialFullAddons[i].checked) {
+            addonsCost = addonsCost + partial_full_addon_prices[partialFullAddons[i].value];
+        }
+    };
+    break;
     case 'fullsuit':
         for (var i = 0; i < fullsuitAddons.length; i++) {
             if (fullsuitAddons[i].checked) {
                 addonsCost = addonsCost + fullsuit_addon_prices[fullsuitAddons[i].value];
             }
         }
-        break;
+    break;
     };
 
     return addonsCost;
@@ -178,14 +196,28 @@ function changeType()
         document.getElementById('partial').style.display = 'none';
         document.getElementById('feetpaws-partial').style.display = 'none';
         document.getElementById('tail-partial').style.display = 'none';
+        document.getElementById('partial-full').style.display = 'none';
+        document.getElementById('tail-partial-full').style.display = 'none';
         document.getElementById('tail-fullsuit').style.display = 'none';
         document.getElementById('fullsuit').style.display = 'none';
         break;
     case 'partial':
         document.getElementById('head').style.display = 'block';
         document.getElementById('partial').style.display = 'block';
-        document.getElementById('feetpaws-partial').style.display = 'block';
         document.getElementById('tail-partial').style.display = 'block';
+        document.getElementById('partial-full').style.display = 'none';
+        document.getElementById('tail-partial-full').style.display = 'none';
+        document.getElementById('feetpaws-partial').style.display = 'none';
+        document.getElementById('tail-fullsuit').style.display = 'none';
+        document.getElementById('fullsuit').style.display = 'none';
+        break;
+    case 'partial-full':
+        document.getElementById('head').style.display = 'block';
+        document.getElementById('partial').style.display = 'none';
+        document.getElementById('feetpaws-partial').style.display = 'block';
+        document.getElementById('tail-partial').style.display = 'none';
+        document.getElementById('partial-full').style.display = 'block';
+        document.getElementById('tail-partial-full').style.display = 'block';
         document.getElementById('tail-fullsuit').style.display = 'none';
         document.getElementById('fullsuit').style.display = 'none';
         break;
@@ -194,6 +226,8 @@ function changeType()
         document.getElementById('feetpaws-partial').style.display = 'none';
         document.getElementById('partial').style.display = 'none';
         document.getElementById('tail-partial').style.display = 'none';
+        document.getElementById('partial-full').style.display = 'none';
+        document.getElementById('tail-partial-full').style.display = 'none';
         document.getElementById('tail-fullsuit').style.display = 'block';
         document.getElementById('fullsuit').style.display = 'block';
         break;

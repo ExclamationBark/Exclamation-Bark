@@ -5,8 +5,8 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Exclamation Bark</title>
-  <meta name="description" content="Exclamation Bark: Express yourself with cute fursuits and accessories!">
+  <title>ExclamationBARK</title>
+  <meta name="description" content="ExclamationBARK: Express yourself with cute fursuits and accessories!">
   <meta name="author" content="">
 
   <!-- Mobile Specific Metas
@@ -70,7 +70,8 @@
             <legend>Commission Type</legend> 
             <select id="commType" name="commType" onchange="calculateTotal(); changeType();">
               <option value="head">Head</option>
-              <option value="partial">Partial</option>
+              <option value="partial">Mini Partial</option>
+              <option value="partial-full">Full Partial</option>
               <option value="fullsuit">Fullsuit</option>
             </select>
 
@@ -131,7 +132,7 @@
               </fieldset>
             </div>
             <!-- END HEAD -->
-            <!-- START PARTIAL -->
+            <!-- START MINI PARTIAL -->
             <div id="partial" class="calc-section">
               <fieldset>
                 <legend><strong>Handpaws</strong></legend>
@@ -147,26 +148,23 @@
                 <strong>Add-Ons</strong>
                 <label for="handpaw-claws"><input type="checkbox" id="handpaw-claws" name="partial-addons" value="handpaw-claws" onchange="calculateTotal()"/>Plush Claws (+$50)</label> 
               </fieldset>
-            </div>
-
-            <div id="feetpaws-partial" class="calc-section">
+            <!-- <div id="feetpaws-partial" class="calc-section">
               <fieldset>
                 <legend><strong>Feetpaws</strong></legend>
-                <strong>Note:</strong> Not included with mini partials by default.
+                <strong>Note:</strong> One pair of feet is included in a full partial by default. Extra pairs are an additional fee.
                 <div class="bullets bullet-points"> 
-                  Default options include: <ul>
+                  <br>Default options include: <ul>
                     <li>Fully lined with quilted broadcloth, colorfast neoprene, or spacer mesh</li>
                     <li>No claws</li>
                   </ul>
                 </div>
 
                 <strong>Add-Ons</strong>
-                <label for="sockpaws"><input type="checkbox" id="sockpaws" name="partial-addons" value="sockpaws" onchange="calculateTotal()"/>Add Indoor Sockpaws (+$600)</label>
-                <label for="feetpaws"><input type="checkbox" name="partial-addons" value="feetpaws" onchange="calculateTotal()"/>Add Outdoor Feetpaws (+$600)</label>
+                <label for="sockpaws"><input type="checkbox" id="sockpaws" name="partial-addons" value="sockpaws" onchange="calculateTotal()"/>Add Additional Indoor Sockpaws (+$600)</label>
+                <label for="feetpaws"><input type="checkbox" name="partial-addons" value="feetpaws" onchange="calculateTotal()"/>Add Additional Outdoor Feetpaws (+$600)</label>
                 <label for="feetpaw-claws"><input type="checkbox" id="feetpaw-claws" name="partial-addons" value="feetpaw-claws" onchange="calculateTotal()"/>Plush Claws (+$50)</label> 
               </fieldset>
-            </div>
-
+            </div> -->
             <div id="tail-partial">
             <fieldset>
               <legend><strong>Tail</strong></legend>
@@ -184,6 +182,60 @@
               <label for="tail-floor"><input type="checkbox" id="tail-floor" name="partial-addons" value="tail-floor" onchange="calculateTotal()"/>Floor Dragger Tail ($250+)</label>
               <label for="tail-articulated"><input type="checkbox" id="tail-articulated" name="partial-addons" value="tail-articulated" onchange="calculateTotal()"/>Raptor/Dino Tail ($600+)</label>
             </fieldset>
+            </div>
+            </div>
+            <!-- END MINI PARTIAL -->
+            <!-- START PARTIAL FULL -->
+            <div id="partial-full" class="calc-section">
+              <fieldset>
+                <legend><strong>Handpaws</strong></legend>
+                <div class="bullets bullet-points"> 
+                  Default options include:
+                  <ul>
+                    <li>Puffy 4 finger design or 3 finger hooves</li>
+                    <li>Unlined, with finger pillow padding</li>
+                    <li>Mochi minky paw pads</li>
+                    <li>No claws</li>
+                  </ul>
+                </div>
+                <strong>Add-Ons</strong>
+                <label for="handpaw-claws"><input type="checkbox" id="handpaw-claws" name="partial-full-addons" value="handpaw-claws" onchange="calculateTotal()"/>Plush Claws (+$50)</label> 
+              </fieldset>
+            <div id="feetpaws-partial" class="calc-section">
+              <fieldset>
+                <legend><strong>Feetpaws</strong></legend>
+                <strong>Note:</strong> One pair of feet is included in a full partial by default. Extra pairs are an additional fee.
+                <div class="bullets bullet-points"> 
+                  <br>Default options include: <ul>
+                    <li>Fully lined with quilted broadcloth, colorfast neoprene, or spacer mesh</li>
+                    <li>No claws</li>
+                  </ul>
+                </div>
+
+                <strong>Add-Ons</strong>
+                <label for="sockpaws"><input type="checkbox" id="sockpaws" name="partial-full-addons" value="sockpaws" onchange="calculateTotal()"/>Add Additional Indoor Sockpaws (+$600)</label>
+                <label for="feetpaws"><input type="checkbox" name="partial-full-addons" value="feetpaws" onchange="calculateTotal()"/>Add Additional Outdoor Feetpaws (+$600)</label>
+                <label for="feetpaw-claws"><input type="checkbox" id="feetpaw-claws" name="partial-full-addons" value="feetpaw-claws" onchange="calculateTotal()"/>Plush Claws (+$50)</label> 
+              </fieldset>
+            </div>
+            <div id="tail-partial-full" class="calc-section">
+              <fieldset>
+                <legend><strong>Tail</strong></legend>
+                <div class="bullets bullet-points"> 
+                  Default options include: <ul>
+                    <li>Attached via belt loops</li>
+                    <li>Medium size</li>
+                    <li>Standard canine style or nub</li>
+                  </ul>
+                </div>
+                <strong>Add-Ons</strong>
+                <label for="tail-nub"><input type="checkbox" id="tail-nub" name="partial-full-addons" value="tail-nub" onchange="calculateTotal()"/>Nub Tail</label>
+                <label for="tail-curly"><input type="checkbox" id="tail-curly" name="partial-full-addons" value="tail-curly" onchange="calculateTotal()"/>Curly Canine Tail ($150+)</label>
+                <label for="tail-feline"><input type="checkbox" id="tail-feline" name="partial-full-addons" value="tail-feline" onchange="calculateTotal()"/>Long Feline Tail ($150+)</label>
+                <label for="tail-floor"><input type="checkbox" id="tail-floor" name="partial-full-addons" value="tail-floor" onchange="calculateTotal()"/>Floor Dragger Tail ($250+)</label>
+                <label for="tail-articulated"><input type="checkbox" id="tail-articulated" name="partial-full-addons" value="tail-articulated" onchange="calculateTotal()"/>Raptor/Dino Tail ($600+)</label>
+              </fieldset>
+            </div>
             </div>
             <!-- END PARTIAL -->
             <!-- START FULLSUIT -->
