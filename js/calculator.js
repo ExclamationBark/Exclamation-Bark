@@ -1,9 +1,9 @@
 //////////////// PRICING CALCULATOR ////////////////
 var base_prices = new Array();
-base_prices["head"]=3000;
-base_prices["partial"]=3600;
-base_prices["partial-full"]=4200;
-base_prices["fullsuit"]=7700;
+base_prices["head"]=3500;
+base_prices["partial"]=4200;
+base_prices["partial-full"]=4800;
+base_prices["fullsuit"]=9000;
 
 var fur_prices = new Array();
 fur_prices["fur1"]=0;
@@ -46,6 +46,7 @@ var partial_full_addon_prices = new Array();
 partial_full_addon_prices["feetpaws"] = 600;
 partial_full_addon_prices["sockpaws"] = 600;
 partial_full_addon_prices["feetpaw-claws"] = 50;
+partial_full_addon_prices["handpaw-claws"] = 50;
 partial_full_addon_prices["tail-nub"] = 0;
 partial_full_addon_prices["tail-curly"] = 150;
 partial_full_addon_prices["tail-feline"] = 150;

@@ -606,6 +606,7 @@ option {
      #fast-links {
         padding: 0 2rem 2rem 2rem;
         grid-gap: 20px;
+  
     }
 
     #footer a {
@@ -630,7 +631,11 @@ option {
 
    
 
-    #fast-links a {
+    #application {
+        display:block;
+        min-height: 7rem;
+        font-size: 13px;
+        line-height: 7rem;
     }
 }
 
